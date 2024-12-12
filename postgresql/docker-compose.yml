@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  postgresql_challenge:
+    image: bitnami/postgresql
+    container_name: postgresql_challenge
+    environment:
+      - POSTGRESQL_PASSWORD=docker_pwd
+      - POSTGRESQL_DATABASE=curso_docker
+      - POSTGRESQL_USERNAME=docker_usr
+    ports:
+      - "5432:5432"
+    restart: always
